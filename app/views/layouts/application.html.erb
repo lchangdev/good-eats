@@ -7,7 +7,10 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+  <%= link_to 'home', root_path %> | <%= link_to 'restaurant list', restaurants_path %> | <%= link_to 'submit new restaurant', new_restaurant_path %>
+  <% if flash.any? %>
+    <%= flash[:notice] %>
+  <% end %>
 <%= yield %>
 
 </body>

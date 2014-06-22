@@ -1,0 +1,7 @@
+<h1>Ten most recent restaurants</h1>
+<%= link_to 'view full list here', restaurants_path %>
+<% @restaurants.each do |restaurant| %>
+  <p><%= link_to restaurant.name, restaurant_path(restaurant) %></p>
+<% end %>
+
+
